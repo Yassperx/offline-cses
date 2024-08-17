@@ -71,6 +71,7 @@ for i in $(seq 1 "$max_i"); do
     # Check if timeout occurred
     if [ $? -eq 124 ]; then
         echo -e "Test ${i}: ${RED}[TLE]${NC}"
+        all_tests += 1
         all_passed=false
         rm -f temp_output.txt temp_error.txt
         continue
